@@ -1,2 +1,2 @@
 # Spring-Projects
-This Repository includes my all learning projects of Spring Framework
+This repository contains the learning projects I have worked on using the Spring Framework.
