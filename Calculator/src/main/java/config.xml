@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- dependency beans -->
+	<bean id="add" class="org.ncu.lab.Calculator.AdditionService"></bean>
+	<bean id="sub" class="org.ncu.lab.Calculator.SubtractionService"></bean>
+	<bean id="mul" class="org.ncu.lab.Calculator.MultiplicationService"></bean>
+	<bean id="div" class="org.ncu.lab.Calculator.DivisionService"></bean>
+
+    <bean id="calculator" class="org.ncu.lab.Calculator.Calculator">
+    	<constructor-arg ref='add'></constructor-arg>
+    	<constructor-arg ref='sub'></constructor-arg>
+    	<constructor-arg ref='mul'></constructor-arg>
+    	<constructor-arg ref='div'></constructor-arg>
+    </bean>
+
+</beans>
